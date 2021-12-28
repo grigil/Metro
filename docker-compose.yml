@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flask:
+    build: .
+    container_name: backend-flask
+    networks:
+      - default
+    environment:
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=True
+    restart: on-failure
+    volumes:
+      - .:/metro
+    ports:
+      - "5000:5000"
+    command: python app.py

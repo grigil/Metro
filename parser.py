@@ -4,7 +4,7 @@ import psycopg2
 import time
 
 # BD connect
-connection = psycopg2.connect(database="metro", user="postgres", password="***", host="localhost", port="5432")
+connection = psycopg2.connect(database="metro", user="postgres", password="*****", host="localhost", port="5432")
 
 
 # Postgresql add data
@@ -31,10 +31,10 @@ def convert_date(date):
     if "декабря" in date:
         return "2021-12-" + date.split(" ")[0]
     elif "ноября" in date:
-        return "2021-11-" + date.split(", ")[0]
+        return "2021-11-" + date.split(" ")[0]
 
 while True:
-    # BS4 preparation
+    # BS4 preparationpip freeze > my_flask_app/requirements.txt
     url = "https://mosmetro.ru/news/"
     page = requests.get(url).text
     soup = BeautifulSoup(page, 'html.parser')
