@@ -30,6 +30,7 @@ class NewsModel(db.Model):
     def __repr__(self):
         return f"<news {self.id}>"
 
+
 @app.route('/metro/news', methods=['GET'])
 def get_tasks():
     day = request.args.get('day', default=None, type=int)
@@ -46,5 +47,7 @@ def get_tasks():
             "url": news.url
         } for news in task]
         return jsonify(response)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
