@@ -32,6 +32,26 @@ def convert_date(date):
         return "2021-12-" + date.split(" ")[0]
     elif "ноября" in date:
         return "2021-11-" + date.split(" ")[0]
+    elif "октября" in date:
+        return "2021-10-" + date.split(" ")[0]
+    elif "сентября" in date:
+        return "2021-09-" + date.split(" ")[0]
+    elif "августа" in date:
+        return "2021-08-" + date.split(" ")[0]
+    elif "июля" in date:
+        return "2021-07-" + date.split(" ")[0]
+    elif "июня" in date:
+        return "2021-06-" + date.split(" ")[0]
+    elif "мая" in date:
+        return "2021-05-" + date.split(" ")[0]
+    elif "апреля" in date:
+        return "2021-04-" + date.split(" ")[0]
+    elif "марта" in date:
+        return "2021-03-" + date.split(" ")[0]
+    elif "февраля" in date:
+        return "2021-02-" + date.split(" ")[0]
+    elif "января" in date:
+        return "2021-01-" + date.split(" ")[0]
 
 while True:
     # BS4 preparationpip freeze > my_flask_app/requirements.txt
