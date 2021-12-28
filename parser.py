@@ -54,7 +54,7 @@ def convert_date(date):
         return "2021-01-" + date.split(" ")[0]
 
 while True:
-    # BS4 preparationpip freeze > my_flask_app/requirements.txt
+    # BS4 preparationpip
     url = "https://mosmetro.ru/news/"
     page = requests.get(url).text
     soup = BeautifulSoup(page, 'html.parser')
@@ -70,4 +70,3 @@ while True:
         if exist_test(news_url):
             add_data(data)
     time.sleep(600)
-    print("next pars")
